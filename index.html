@@ -14,18 +14,41 @@
             margin-right: auto;
         }
 
-        #bannerimage {
+        body {
+            background-color: rgb(51, 51, 51);
+            color: white;
+            font-family: Verdana, sans-serif;
+        }
+
+        .bannerimage {
             width: 100%;
-            background-image: url('images/carimg.PNG');
             height: 300px;
-            background-position: center;
-            border-radius: 5px;
+        }
+
+        .bannerimage::after {
+            content:"";
+            background-image: url('images/carimg.PNG');
+            position: absolute;
+            top:0px;
+            left:0px;
+            width: 100%;
+            height: 300px;
+            z-index: -1;
+            opacity: 0.35;
+        }
+
+        .bannerimage h1 {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color:cadetblue
         }
 
         .sidebar {
             height: 100%;
-            width: 170px;
-            background-color: rgb(49, 49, 49);
+            width: 200px;
+            background-color: rgb(27, 27, 27);
             background-position: center;
             position: fixed;
             z-index: 1;
@@ -49,13 +72,22 @@
 
         .sidebar p {
             padding-top: 8px;
-            padding-bottom: 10px;
-            color:white;
+            padding-bottom: 20px;
+            color: white;
         }
 
         .main {
-            margin-left: 170px;
-            padding: 0px 10px;
+            margin-left: 200px;
+            margin-top: -20px;
+            padding-left: 10px;
+        }
+
+        .main a {
+            color: rgb(135, 135, 228);
+        }
+
+        .main a:hover {
+            color: blueviolet;
         }
 
         @media screen and (max-height: 450px) {
@@ -75,8 +107,6 @@
             border-radius: 50%;
             float: left;
         }
-
-
     </style>
 
 </head>
@@ -90,17 +120,16 @@
         <a href="mailto:astephens7000@yahoo.com">Email me</a>
     </div>
     <div class="main">
-        <div id="bannerimage">
+        <div class="bannerimage">
             <h1>Alex Stephens Projects Website</h1>
         </div>
         <h2>The Beginning</h2>
         <p>This is the beginnings of learning to create a website from scratch using HTML and CSS.
             Should I succeed, this website will be available through a simple link on my resume.
             Other projects will be showcased on this website as well, to make viewing projects more digestible.
-            To start, this is <a href="https://github.com/a-stephens">a link to my github.</a></p>
-
-        <p>This is a video of my favorite project that I've worked on.</p>
-        <video preload controls autoplay muted>
+            To start, this is <a href="https://github.com/a-stephens">a link to my github.</a>
+            This is a video of my favorite project that I've worked on.</p>
+        <video preload controls autoplay muted loop>
             <source src="videos/fulloperation.mp4" type="video/mp4">
         </video>
     </div>
