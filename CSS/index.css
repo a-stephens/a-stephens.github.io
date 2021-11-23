@@ -1,5 +1,5 @@
 video {
-    width: 80%;
+    width: 60%;
     border-radius: 10px;
     display: block;
     margin-left: auto;
@@ -19,7 +19,7 @@ body {
 
 .bannerimage::after {
     content: "";
-    background-image: url('images/carimg.PNG');
+    background-image: url('../images/carimg.PNG');
     position: absolute;
     top: 0px;
     left: 0px;
